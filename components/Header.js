@@ -1,16 +1,17 @@
 import Link from "next/link";
-
 const Header = () => {
     return (
         <header>
-            <div className="logo">
-            <Link href="/">Logo</Link>
+            <div>
+                <div className="logo">
+                    <Link href="/">SHANG</Link>
+                </div>
+                <nav>
+                    <Link href="/works">Project</Link>
+                    <Link href="/posts">Post</Link>
+                    <Link href="https://github.com/shangyuanhsu" target="_blank">Github</Link>
+                </nav>
             </div>
-            <nav>
-                <Link href="/works">WORKS</Link>
-                <Link href="/posts">POSTS</Link>
-                <Link href="https://github.com/shangyuanhsu" target="_blank">GITHUB</Link>
-            </nav>
         </header>
     );
 }

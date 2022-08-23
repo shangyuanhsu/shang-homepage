@@ -1,6 +1,7 @@
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: antiquewhite;
 }
 
 * {
@@ -9,3 +10,70 @@ body {
   box-sizing: border-box;
 }
 
+header {
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+header>div {
+  max-width: 700px;
+  width: 88%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header>div>nav>a, header>div .logo>a {
+  color: black;
+  padding: 8px;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+header>div>nav>a {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+}
+
+header>div>nav>a:hover {
+  outline: 1px solid black;
+}
+
+header>div>.logo>a {
+  margin-left: 0px;
+  font-weight: bolder;
+  padding-left: 0px;
+}
+
+footer {
+  max-width: 700px;
+  width: 88%;
+  margin: 100px auto 20px auto;
+  text-align: center;
+}
+
+main {
+  
+}
+
+p {
+  margin: 10px 0;
+}
+
+section {
+  max-width: 700px;
+  width: 88%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  line-height: 1.5rem;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
