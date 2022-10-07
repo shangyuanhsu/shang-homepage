@@ -51,6 +51,29 @@ header>div>.logo>a {
   padding-left: 0px;
 }
 
+header .hamburgerBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: all .6s;
+  display: none;
+}
+
+header .hamburgerBtn span {
+  background-color: black;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 2px;
+}
+
+header .hamburgerBtn:hover {
+  justify-content: space-between;
+}
+
 footer {
   max-width: 700px;
   width: 88%;
@@ -58,15 +81,11 @@ footer {
   text-align: center;
 }
 
-main {
-  
-}
-
 p {
   margin: 10px 0;
 }
 
-section {
+main {
   max-width: 700px;
   width: 88%;
   margin: 0 auto;
@@ -76,4 +95,29 @@ section {
 
 h3 {
   margin-bottom: 15px;
+}
+
+@media screen and (max-width:610px) {
+  /* header{ */
+    /* position: relative; */
+    /* overflow: hidden; */
+  /* } */
+  nav{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+  }
+  
+  header>div>nav>a{
+    background-color: rgba(255, 255, 255);
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+  }
+  /* header>div>nav.originalHam{
+ 
+  } */
 }

@@ -4,7 +4,7 @@
     justify-content: space-between;
 }
 
-.myInfo div h1 {
+.myInfo div h2 {
     margin-bottom: 15px;
 }
 
@@ -21,6 +21,7 @@
 
 .MySline>canvas {
     margin: 0 auto;
+    max-width: 750px;
     width: 90% !important;
     height: 90% !important;
 }

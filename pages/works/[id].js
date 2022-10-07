@@ -1,7 +1,7 @@
 const WorksItem = () => {
     return (
         <div>
-            <h1>WorksItem</h1>
+            <h1>Project Item</h1>
         </div>
     );
 }

@@ -3,15 +3,22 @@ const Header = () => {
     return (
         <header>
             <div>
-                <div className="logo">
+                <h1 className="logo">
                     <Link href="/">SHANG</Link>
-                </div>
+                </h1>
                 <nav>
                     <Link href="/works">Project</Link>
                     <Link href="/posts">Post</Link>
-                    <Link href="https://github.com/shangyuanhsu" target="_blank">Github</Link>
+                    <Link href="https://github.com/shangyuanhsu">Github</Link>
+                    <Link href="https://www.linkedin.com/in/hsushangyuan/">Linkedin</Link>
                 </nav>
+                <div className="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+
         </header>
     );
 }
