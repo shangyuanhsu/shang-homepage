@@ -28,21 +28,28 @@ header>div {
   justify-content: space-between;
 }
 
-header>div>nav>a, header>div .logo>a {
+li {
+  width: 90px;
+  list-style:none;
+  display:inline-block;
+  margin-left: 5px;
+  text-align: center;
+}
+
+header>div>nav>ul>li>a, header>div .logo>a {
   color: black;
   padding: 8px;
   text-decoration: none;
-  margin-left: 5px;
 }
 
-header>div>nav>a {
+header>div>nav>ul>li>a {
   display: inline-block;
   width: 80px;
   text-align: center;
 }
 
-header>div>nav>a:hover {
-  outline: 1px solid black;
+header>div>nav>ul>li:hover, header>div>nav>ul>.active {
+  border: 1px solid black;
 }
 
 header>div>.logo>a {
@@ -81,7 +88,7 @@ footer {
   text-align: center;
 }
 
-section{
+section {
   margin-bottom: 40px;
 }
 
@@ -102,11 +109,12 @@ h3 {
 }
 
 @media screen and (max-width:610px) {
+
   /* header{ */
-    /* position: relative; */
-    /* overflow: hidden; */
+  /* position: relative; */
+  /* overflow: hidden; */
   /* } */
-  nav{
+  nav {
     position: absolute;
     top: 60px;
     right: 0px;
@@ -114,13 +122,14 @@ h3 {
     height: 100vh;
     background-color: antiquewhite;
   }
-  
-  header>div>nav>a{
+
+  header>div>nav>a {
     background-color: rgba(255, 255, 255);
     display: block;
     width: 70%;
     margin: 20px auto;
   }
+
   /* header>div>nav.originalHam{
  
   } */

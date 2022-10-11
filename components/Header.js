@@ -1,5 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 const Header = () => {
+    const router = useRouter();
+
     return (
         <header>
             <div>
@@ -7,10 +11,17 @@ const Header = () => {
                     <Link href="/">SHANG</Link>
                 </h1>
                 <nav>
-                    <Link href="/works">Project</Link>
-                    <Link href="/posts">Post</Link>
-                    <Link href="https://github.com/shangyuanhsu">Github</Link>
-                    <Link href="https://www.linkedin.com/in/hsushangyuan/">Linkedin</Link>
+                    <ul>
+                        <li className={router.pathname == "/works" ? "active" : ""}>
+                            <Link href="/works">Project</Link>
+                        </li>
+                        <li className={router.pathname == "/posts" ? "active" : ""}>
+                            <Link  href="/posts">Post</Link>
+                        </li>
+                        <li>
+                            <Link href="https://github.com/shangyuanhsu">Github</Link>
+                        </li>
+                    </ul>
                 </nav>
                 <div className="hamburgerBtn">
                     <span></span>
@@ -18,7 +29,6 @@ const Header = () => {
                     <span></span>
                 </div>
             </div>
-
         </header>
     );
 }
