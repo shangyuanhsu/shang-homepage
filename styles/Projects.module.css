@@ -1,0 +1,28 @@
+.worksBox{
+    display :grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 80px;
+}
+@media screen and (max-width:815px) {
+    .worksBox{
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }  
+}
+
+.project {  
+    cursor: pointer;
+}
+.project h2{
+    margin: 5px 0;
+}
+
+.projectImg{
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project p {
+    line-height: 1.6em;
+    word-break: break-all;}

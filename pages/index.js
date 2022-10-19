@@ -34,7 +34,7 @@ export default function Home() {
         </section>
 
         <section>
-          <Title txt={"Skill"} />
+          <Title txt={"Skills"} />
           <p>HTML / CSS / JavaScript / VueJS / ReactJS / Ajax / NodeJS / PHP / MySQL / Mongodb / Git /</p>
         </section>
 

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 const Header = () => {
     const router = useRouter();
+    console.log(router)
 
     return (
         <header>
@@ -10,13 +11,13 @@ const Header = () => {
                 <h1 className="logo">
                     <Link href="/">SHANG</Link>
                 </h1>
-                <nav>
+                <nav className="show">
                     <ul>
-                        <li className={router.pathname == "/works" ? "active" : ""}>
-                            <Link href="/works">Project</Link>
+                        <li className={router.pathname == "/works" || router.pathname =="/works/[id]" ? "active" : ""}>
+                            <Link href="/works">Projects</Link>
                         </li>
                         <li className={router.pathname == "/posts" ? "active" : ""}>
-                            <Link  href="/posts">Post</Link>
+                            <Link  href="/posts">Posts</Link>
                         </li>
                         <li>
                             <Link href="https://github.com/shangyuanhsu">Github</Link>
