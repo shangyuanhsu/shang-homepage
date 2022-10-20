@@ -15,7 +15,7 @@ export default function Home() {
         <title>Shang | Homepage</title>
       </Head>
       <MySpline />
-      <main>
+      <section>
         <section className={styles.myInfo}>
           <div>
             <h2>Hsu,Shang-Yuan</h2>
@@ -55,7 +55,7 @@ export default function Home() {
           <p>Master's deegree, Plastic arts, Tainan National University of the Arts</p>
           <p>Bachelor's degree, Fine Arts, Taipei National University of the Arts</p>
         </section>
-      </main>
+      </section>
     </>
   )
 }

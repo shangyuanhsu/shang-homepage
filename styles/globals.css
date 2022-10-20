@@ -1,8 +1,10 @@
-html,
-body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: antiquewhite;
-  color: rgb(40, 20, 20);
+:root {
+  --l-body: #faebd7;
+  --l-header: rgba(255, 255, 255, 0.5);
+  --l-color: rgb(40, 20, 20);
+  --d-body: rgb(60, 57, 54);
+  --d-header: rgba(0, 0, 0, 0.5);
+  --d-color: rgb(217, 217, 217);
 }
 
 * {
@@ -11,23 +13,60 @@ body {
   box-sizing: border-box;
 }
 
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+}
+
+body .lightContent {
+  background-color: var(--l-body);
+  color: var(--l-color);
+  transition: all 0.5s;
+  height: 100vh;
+  overflow: auto;
+}
+
+body .darkContent {
+  background-color: var(--d-body);
+  color: var(--d-color);
+  transition: all 0.5s;
+  height: 100vh;
+  overflow: auto;
+}
+
 header {
   padding: 10px 0;
-  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 50;
-  overflow: hidden;
+}
+
+body .lightContent header {
+  background-color: var(--l-header);
+ 
+
+}
+
+body .darkContent header {
+  background-color: var(--d-header);
+
 }
 
 header>div {
   max-width: 700px;
   width: 88%;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 40px;
+  align-items: center
+}
+
+header>div .themeBtn {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 8px;
 }
 
 li {
@@ -39,9 +78,16 @@ li {
 }
 
 header>div>nav>ul>li>a, header>div .logo>a {
-  color: rgb(40, 20, 20);
   padding: 8px;
   text-decoration: none;
+}
+
+body .lightContent header>div>nav>ul>li>a, body .lightContent header>div .logo>a {
+  color: var(--l-color);
+}
+
+body .darkContent header>div>nav>ul>li>a, body .darkContent header>div .logo>a {
+  color: var(--d-color);
 }
 
 header>div>nav>ul>li>a {
@@ -50,8 +96,11 @@ header>div>nav>ul>li>a {
   text-align: center;
 }
 
-header>div>nav>ul>li:hover, header>div>nav>ul>.active {
-  border: 1px solid gb(40, 20, 20);
+body .lightContent header>div>nav>ul>li:hover, body .lightContent header>div>nav>ul>.active {
+  outline: 1px solid rgb(40, 20, 20);
+}
+body .darkContent header>div>nav>ul>li:hover, body .darkContent header>div>nav>ul>.active {
+  outline: 1px solid rgb(139, 131, 131);
 }
 
 header>div>.logo>a {
@@ -73,13 +122,19 @@ header .hamburgerBtn span {
   width: 100%;
   height: 2px;
   display: block;
-  background-color: rgb(40, 20, 20);
   margin-left: auto;
   border-radius: 4px;
   position: absolute;
   transition: all 0.3s;
 }
 
+body .lightContent header .hamburgerBtn span {
+  background-color: var(--l-color);
+}
+
+body .darkContent header .hamburgerBtn span {
+  background-color: var(--d-color);
+}
 
 header .hamburgerBtn span:first-child {
   top: 5px;
@@ -108,43 +163,68 @@ header .hamburgerBtnCkecked span:last-child {
 }
 
 @media screen and (max-width:815px) {
+
+  header>div {
+    grid-template-columns: 1fr 100px 40px;
+  }
+
   header .hamburgerBtn {
     display: block;
   }
 
   nav {
-    border: 1px solid red;
-  }
-
-  nav {
     width: 100%;
-    height: 100vh;
+   
+    border-radius: 0 0 8px 8px;
     position: absolute;
-    top: 60px;
-    right: -2000px;
-    background-color: antiquewhite;
-    transform: all 0.6s;
-  }
-  nav.show{
     right: 0;
+    top: 60px;
+    display: none;
+    transition: all 0.5s;
+  }
+  body .lightContent nav{
+    background-color: var(--l-body);
+  }
+  body .darkContent nav{
+    background-color: var(--d-body);
   }
 
-  header>div>nav>ul>li {
-    background-color: rgba(255, 255, 255);
+  nav.show {
     display: block;
+    transition: all 0.5s;
+  }
+  header>div>nav>ul>li{
     width: 70%;
+    display: block;
     margin: 20px auto;
+    background-color: rgba(255, 255, 255);
+  }
+  body .lightContent  header>div>nav>ul>li{
+    background-color: rgba(255, 255, 255);
+  }
+  body .darkContent  header>div>nav>ul>li{
+    background-color: var(--d-header);
+  }
+  header>div>nav>ul>li>a {
+    width: 100%;
+    display: block;
   }
 
 }
 
+@media screen and (max-width:550px) {
+  header>div {
+    grid-template-columns: 1fr 50px 40px;
+  }
+}
 
 footer {
   max-width: 700px;
   width: 88%;
-  margin: 100px auto 20px auto;
+  padding: 20px 20px;
   text-align: center;
   font-size: 12px;
+  margin: 0 auto;
 }
 
 section {
