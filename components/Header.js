@@ -25,8 +25,8 @@ const Header = () => {
                 </h1>
                 <nav className={hamburger === true ? "show" : ""}>
                     <ul>
-                        <li className={router.pathname == "/works" || router.pathname == "/works/[id]" ? "active" : ""} onClick={() => { handleHamburgerBtn() }}>
-                            <Link href="/works">Projects</Link>
+                        <li className={router.pathname == "/projects" || router.pathname == "/projects/[id]" ? "active" : ""} onClick={() => { handleHamburgerBtn() }}>
+                            <Link href="/projects">Projects</Link>
                         </li>
                         <li className={router.pathname == "/posts" ? "active" : ""} onClick={() => { handleHamburgerBtn() }}>
                             <Link href="/posts">Posts</Link>
