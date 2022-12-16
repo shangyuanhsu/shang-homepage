@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import Head from 'next/head';
+import Image from "next/image";
 
 
 export const getServerSideProps = (context) => {
@@ -10,7 +10,10 @@ export const getServerSideProps = (context) => {
             "param": "MathIsland",
             "title": "Math Island",
             "image": "mi1.PNG",
-            "describe": "Students can learn math from the game, and teachers can also master the students' learning progress through this platform."
+            "imgArr": ["mi2.PNG", "mi3.PNG"],
+            "describe": "Mathematical Island mainly uses computers as learning aids for students to assist teachers in teaching. Math Island presents mathematical concepts in the form of interactive games and guides students to self-paced learning in the form of curriculum maps. Through challenging mathematical tasks, students can plan and manage their own learning according to their own abilities, thereby enhancing their confidence and interest. Teachers can clearly grasp the learning status and progress of each student through the learning process, and give students different suggestions and help to solve students' learning difficulties.",
+            "skill": { "design": ["PhotoShop", "llustrator", "XD"], "development": ["HTML", "CSS", "JS", "PHP", "MySQL"] },
+            "iWantToSay":"Mainly maintain programs and develop new requirements, and organize student learning data."
         },
         {
             "id": 1,
@@ -59,7 +62,7 @@ export const getServerSideProps = (context) => {
 const ProjectsItem = ({ projectData }) => {
 
     console.log(projectData)
-    const projectDataprojectData = projectData.length === 0;
+    const hasProjectData = projectData.length === 0;
     return (
         <>
             <Head>
@@ -67,11 +70,25 @@ const ProjectsItem = ({ projectData }) => {
                 <meta name="author" content="shangyuan" />
                 <title>Shang | Projects</title>
             </Head>
-            <div style={projectDataprojectData ? { display: "none" } : { display: "block" }}>
-                <h1>Project Item</h1>
+            <div style={hasProjectData ? { display: "none" } : { display: "block" }}>
+                <h1>{projectData[0].title}</h1>
+                <Image src={`/../public/img/projects/${projectData[0].image}`} width={2613} height={1644} alt="" />
+                <h2>Project Describe</h2>
+                <p>
+                    {projectData[0].describe}
+                </p>
+               
+                <h2>Design : </h2>
+                <p>{projectData[0].skill.design.join(" / ")}</p>
+                <h2>Development : </h2>
+                <p>{projectData[0].skill.development.join(" / ")}</p>
+                <h2>I want to say : </h2>
+                <p>{projectData[0].iWantToSay}</p>
+
             </div>
-            <div style={projectDataprojectData ? { display: "block" } : { display: "none" }}>
-                <h1>ERROR</h1>
+            <div style={hasProjectData ? { display: "block" } : { display: "none" }}>
+                <h1>Oops!</h1>
+                <p>no results</p>
             </div>
         </>
 

@@ -28,9 +28,9 @@ export default function Home() {
         </section>
 
         <section>
-          <p><b>Learning : </b>Learn by doing, and organize it into your own structure to improve self-learning ability</p>
-          <p><b>Work : </b>Choose the right way to do the right thing</p>
-          <p><b>In the group : </b> Willing to discuss and respond</p>
+          <p><b>Learning by doing : </b>Develop own structure to grow my self learning skill</p>
+          <p><b>Working on : </b>Explore the appropriate procedure of work</p>
+          <p><b>Teamwork : </b>Good at communicating & Engage in the conversation</p>
         </section>
 
         <section>
@@ -42,8 +42,8 @@ export default function Home() {
           <Title txt={"Work Experience"} />
           <p><b>2022 -  present : </b>Cloudnifier Taiwan Front-end Engineer</p>
           <p>[CRM Customized page program development and maintenance]</p>
-          <p><b>2020 -  present : </b>TibaMe lecturer</p>
-          <p>[Teaching content is visual design, HTML, CSS, JS]</p>
+          <p><b>2020 -  present : </b>Teacher</p>
+          <p>[Teaching UI design, HTML, CSS, JS]</p>
           <p><b>2020 -  2021 : </b>Network Learning Technology, NCU Web developer</p>
           <p>[Develop and maintain websites, including planning database, website vision, front-end function development, and back-end data organization]</p>
           <p><b>2015 -  present : </b>freelancer</p>

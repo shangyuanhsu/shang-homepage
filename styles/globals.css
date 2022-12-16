@@ -66,7 +66,7 @@ header>div {
 header>div .themeBtn {
   cursor: pointer;
   padding: 5px;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 li {
@@ -245,4 +245,14 @@ main {
 
 h3 {
   margin-bottom: 15px;
+}
+
+body .errorPage h2{
+  margin: 20px 0;
+}
+body .lightContent .errorPage p a{
+  color: var(--l-color);
+}
+body .darkContent .errorPage p a{
+  color: var(--d-color);
 }

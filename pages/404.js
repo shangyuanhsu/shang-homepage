@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 const ErrorPage = () => {
-    const router = useRouter();
+    // const router = useRouter();
     // useEffect(() => {
     //     setTimeout(() => {
     //         router.push('/');
